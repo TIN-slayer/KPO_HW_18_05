@@ -1,0 +1,12 @@
+package ru.hse.list.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class IDNotFoundException extends RuntimeException {
+
+    public IDNotFoundException() {
+        super("Record with this ID is not found in database");
+    }
+}
